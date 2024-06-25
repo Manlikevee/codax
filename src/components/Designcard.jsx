@@ -1,20 +1,27 @@
 import React from 'react'
 import Image from 'next/image'
-const Designcard = () => {
+const Designcard = ({data}) => {
   return (
     <div className='portfoliocard'>
 
 <div className="imagecard">
-<img src="https://res.cloudinary.com/viktortech/image/upload/v1/media/images/20240429_125634_q54fmt" alt="" />
+  <div className="ovl">
+  <span className="material-symbols-outlined">
+  arrow_outward
+
+</span>
+  </div>
+
+<img src={data.imageUrl} alt="" />
 </div>
 <div className="textpill">
   <div className="viewname">
-    <div className="vname">Geegpay
+    <div className="vname">{data.title}
 
 
 
 </div>
-    <div className="vservice">Finance</div>
+    <div className="vservice">{data.service}</div>
   </div>
   <div className="viewsite">
     <div className="sd">

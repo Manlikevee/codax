@@ -10,7 +10,11 @@ const Herodata = () => {
     <div className="herocenter">
         <br />
         <br /><br />
-        <h1>Best website by <span>CodaxLab</span> Developers</h1>
+        <h1>Discover the world’s top
+designers & creatives</h1>
+<div className="subtxt">
+Codax is a community of top-tier developers, designers, and tech professionals. CodaxLab is the premier destination to discover and showcase creative work, and it is home to the world's leading design experts.
+</div>
         <div className="search">
             <div className="searchpill">
                 <input type="text" placeholder='Enter product, categories, service name...'/>
