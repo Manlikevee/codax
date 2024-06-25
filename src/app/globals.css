@@ -193,13 +193,13 @@ color: rgba(77, 74, 74, 1);
     object-fit: cover;
     object-fit: cover;
     object-position: top;
-    filter: brightness(0.7) ;
+    filter: brightness(1) ;
     transition: 1.5s;
 }
 
 .imagecard img:hover {
   object-position: bottom;
-  filter: brightness(1);
+  filter: brightness(0.7);
 }
 .mytabs{
   padding-top: 10px;
