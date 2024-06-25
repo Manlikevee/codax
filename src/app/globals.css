@@ -2,26 +2,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Pacifico&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Manrope&family=Poppins&family=Roboto&display=swap');
 *,
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Inter';
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+
+  /* font-family: 'Nunito Sans', sans-serif; */
   background-color: #FFF;
   overflow-x: hidden;
 }
 
+
+
 header {
   background-color: white;
-  position: fixed;
+  position: sticky;
+  top: 0;
   width: 100%;
   background: var(--gray-white, #FFF);
-  z-index: 999;
+  z-index: 99;
   /* Line/Bottom */
   box-shadow: 0px -1px 0px 0px #E9EAF0 inset;
 }
@@ -85,13 +93,13 @@ color: rgba(77, 74, 74, 1);
 
 .reg {
   display: flex;
-  padding: 8px 12px;
+  padding: 12px 12px;
   justify-content: center;
   align-items: center;
   gap: 12px;
   color: var(--primary-100, #FFf) !important;
   border-radius: 5px;
-  background: #000;
+  background: #0b0d14;
   border-radius: 3px;
   /* Button/M */
   font-family: Inter;
@@ -136,14 +144,60 @@ color: rgba(77, 74, 74, 1);
   gap: 35px;
   align-items: center;
 }
+.imagecard img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+    height: 100%;
+    transition: 3s all ease;
+    object-fit: cover;
+    object-fit: cover;
+    object-position: top;
+    filter: brightness(0.6) ;
+    transition: 1.5s;
+}
 
+.imagecard img:hover {
+  object-position: bottom;
+  filter: brightness(1);
+}
 .mytabs{
-  padding-top: 80px;
+  padding-top: 10px;
+  padding-bottom: 5px;
   display: flex;
   justify-content: space-between;
   gap: 30px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+align-items: center;
+margin: auto;
+z-index: 999999;
+}
+.vname{
+  font-family: Inter;
+font-size: 14px;
+font-weight: 600;
+line-height: 16.94px;
+text-align: left;
+align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+justify-content: center;
+
 }
 
+.vservice{
+  padding-inline: 12px;
+  padding-block: 5px;
+  background-color: #0b0d14;
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 6px;
+  line-height: 16.94px;
+}
 .mypls{
   width: 12%;
 }
@@ -182,7 +236,7 @@ color: rgba(37, 37, 37, 1);
 .containers {
   margin: auto;
   padding: 10px;
-  width: 1150px;
+  width: 1250px;
 }
 .logo a{
   font-family: "Pacifico", cursive;
@@ -203,7 +257,178 @@ text-decoration: none;
   background: rgba(243, 243, 244, 1);
 
 }
-@media screen and (max-width: 1200px) {
+
+.herodata{
+  padding-top: 50px;
+  background-color:#0b0d14;
+  background-image: url('https://cpwebassets.codepen.io/assets/packs/profile-bg-optimized-a5ca8f46aca292507f629c62b09630ad.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 78vh;
+  width: 100%;
+display: flex;
+flex-direction: column;
+  border-radius: 0px;
+  color: white;
+overflow: hidden;
+  gap: 10px;
+}
+
+.herotop{
+  height: 100%;
+
+  justify-content: center;
+}
+.herocenter{
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+gap: 20px;
+padding-top: 30px;
+display: flex;
+flex-direction: column;
+  justify-content: center;
+  padding-inline: 50px;
+  text-align: center;
+  height: 100%;
+}
+
+.herocenter h1{
+  padding-inline: 150px;
+  font-family: 'Inter';
+font-size: 35px;
+font-weight: 700;
+line-height: 50px;
+text-align: center;
+letter-spacing: 1.2px;
+text-transform: uppercase;
+}
+
+.search{
+  width: 50%;
+}
+.searchpill{
+  border-radius: 10px;
+  justify-self: center;
+  background-color: white;
+  max-width: 100%;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  padding: 5px;
+}
+.searchpill button{
+  background: rgba(220, 253, 136, 1);
+  padding: 11px;
+color: rgba(11, 13, 20, 1);
+outline: none;
+border: none;
+font-size: 14px;
+font-weight: 400;
+border-radius: 10px;
+line-height: 22.4px;
+letter-spacing: 0.002em;
+text-align: left;
+font-family: 'Inter';
+
+}
+.searchpill input{
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 9px;
+  background-color: transparent;
+color: rgba(135, 142, 152, 1);
+font-size: 14px;
+font-weight: 400;
+line-height: 26.4px;
+letter-spacing: 0.002em;
+text-align: left;
+
+}
+
+.portfoliocard{
+  width: 100%;
+  padding: 2px;
+  border: 1px solid rgba(228, 228, 228, 0.754);
+  border-radius: 7px;
+
+  /* font-family: 'manrope' !important; */
+}
+.viewname{
+  display: flex;
+  gap: 5px;
+  width: 100%;
+  align-items: center;
+}
+.viewsite{
+  width: 60%;
+  display: flex;
+  gap: 10px;
+  align-self: flex-end;
+  justify-content: flex-end;
+}
+
+.sd{
+  display: flex;
+  gap: 2px;
+  font-family: Inter;
+  align-items: center;
+font-size: 15px;
+font-weight: 400;
+line-height: 14.52px;
+text-align: left;
+color: #404040;
+;
+}
+
+.sd span {
+color: rgba(217, 217, 217, 1);
+;
+font-size: 18px;
+font-weight: 600;
+}
+.textpill{
+  display: flex;
+padding-block: 10px;
+padding-inline: 9px;
+}
+
+.imagecard{
+  width: 100%;
+  height: 300px;
+  background: #f9f9f9;
+  max-height: 300px;
+  overflow: hidden;
+  border: 1px solid rgba(228, 228, 228, 0.754);
+  border-radius: 7px;
+}
+/* .herocenter h1 span{
+  color: #3fbf44;
+} */
+
+.portfoliogrid{
+  margin-top: 20px;
+  gap: 24px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.herobottom{
+display: flex;
+justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  align-self: baseline;
+  justify-self: baseline;
+  margin-bottom: 0px;
+}
+.myimg{
+object-fit: contain;
+
+}
+@media screen and (max-width: 1300px) {
   .containers {
 
     width: 95%;

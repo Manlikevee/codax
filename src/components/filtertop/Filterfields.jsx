@@ -21,9 +21,7 @@ const Filterfields = () => {
 <div className="pill">Discover</div>
         </div>
 
-        <div className="filters">
 
-        </div>
     </div>
   )
 }
