@@ -230,7 +230,7 @@ color: rgba(77, 74, 74, 1);
     object-fit: cover;
     object-fit: cover;
     object-position: top;
-    filter: brightness(0.9) ;
+    filter: brightness(1) ;
     transition: 1.5s;
 }
 
