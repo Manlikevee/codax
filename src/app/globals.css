@@ -29,7 +29,7 @@ header {
   top: 0;
   width: 100%;
   background: var(--gray-white, #FFF);
-  z-index: 99;
+  z-index: 9999;
   /* Line/Bottom */
   box-shadow: 0px -1px 0px 0px #E9EAF0 inset;
   border-bottom: 1px solid #E9EAF0;
@@ -119,6 +119,7 @@ color: rgba(77, 74, 74, 1);
   font-size: 15px;
   font-weight: 400;
   line-height: 16.94px;
+  text-transform: capitalize;
   text-align: left;
   text-decoration: none;
   color: rgba(0, 0, 0, 1);
@@ -177,11 +178,47 @@ color: rgba(77, 74, 74, 1);
 .links a:hover {
   color: #3E727D;
 }
+.pill-container {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+}
 
+.pill-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.pill {
+  min-width: 100px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: black;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+  flex: 0 0 auto;
+}
+
+.pill:active {
+  background-color: #0056b3;
+}
 .links {
   display: flex;
   gap: 35px;
   align-items: center;
+}
+.swiper-slide {
+  width: fit-content !important;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+  display: block;
 }
 .imagecard img{
   width: 100%;
@@ -193,7 +230,7 @@ color: rgba(77, 74, 74, 1);
     object-fit: cover;
     object-fit: cover;
     object-position: top;
-    filter: brightness(1) ;
+    filter: brightness(0.9) ;
     transition: 1.5s;
 }
 
@@ -483,6 +520,10 @@ object-fit: contain;
     width: 95%;
     padding: 20px;
   }
+
+  .herocenter h1, .subtxt{
+    padding-inline: 20px;
+  }
 }
 
 .herosection {
@@ -527,5 +568,63 @@ object-fit: contain;
   gap: 20px;
 }
 
+@media screen and (max-width: 1000px) {
+  #middlelinks{
+    display: none;
+    z-index: 999;
+  }
+  .search {
+    width: 80%;
+}
+.herocenter h1{
+  padding-inline: 10px;
+  font-family: 'Inter';
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 38px;
+  text-align: center;
+  /* letter-spacing: 1.2px; */
+  text-transform: uppercase;
 
+}
+.subtxt{
+  padding-inline: 9px;
+}
+
+  .herodata {
+    padding-top: 50px;
+    background-color: #0b0d14;
+    background-image: url(https://cpwebassets.codepen.io/assets/packs/profile-bg-optimized-a5ca8f4….svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 61vh;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px;
+    color: white;
+    overflow: hidden;
+    gap: 10px;
+}
+
+.herocenter {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-inline: 3px;
+  text-align: center;
+  height: 100%;
+}
+.containers {
+  width: 95%;
+  padding: 5px;
+}
+
+}
 

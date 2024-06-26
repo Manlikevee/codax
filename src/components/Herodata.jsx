@@ -13,7 +13,7 @@ const Herodata = () => {
         <h1>Discover the world’s top
 designers & creatives</h1>
 <div className="subtxt">
-Codax is a community of top-tier developers, designers, and tech professionals. CodaxLab is the premier destination to discover and showcase creative work, and it is home to the world's leading design experts.
+Codax is a community of top-tier developers, designers, and tech professionals. The premier destination to discover and showcase creativity.
 </div>
         <div className="search">
             <div className="searchpill">

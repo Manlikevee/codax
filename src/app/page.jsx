@@ -6,6 +6,7 @@ import Filterfields from '@/components/filtertop/Filterfields';
 import Designcard from '@/components/Designcard';
 import { database } from '@/components/firebaseConfig';
 import { ref, onValue } from 'firebase/database';
+import Pills from '@/components/Pills';
 
 const Page = () => {
   const [data, setData] = useState(null);
@@ -23,7 +24,8 @@ const Page = () => {
       <Header />
       <Herodata />
       <div className="containers">
-        <Filterfields />
+        {/* <Filterfields /> */}
+        <Pills/>
         <div className="portfoliogrid">
           {data &&
             Object.keys(data).map((key) => (
