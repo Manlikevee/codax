@@ -1,10 +1,21 @@
 'use client'
-import React from 'react'
-
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
+import { ref, onValue } from 'firebase/database';
+import { database } from '@/components/firebaseConfig';
 import Header from '@/components/Header';
 const page = () => {
   const { id } = useParams();
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    const dbRef = ref(database, `/websitedata/${id}`);
+    onValue(dbRef, (snapshot) => {
+      const fetchedData = snapshot.val();
+      console.log(fetchedData)
+      setData(fetchedData);
+    });
+  }, [id]);
   return (
     <div>
             <Header />
@@ -13,12 +24,12 @@ const page = () => {
             <div className="containers">
               <div className="myp">
               <div className="headerphotos">
-<img src="https://framerusercontent.com/images/TrGIrrNkVE8oUqPtc5us9PxcJbk.png" alt="" />
+<img src={data?.imageUrl} alt={data?.service} />
               </div>
               <div className="sidesection">
 <div className="data">
  <b>
- Byte
+{data?.title}
 </b>
 Get Access To POS Terminals, Business Accounts, Business Tools And Access To Top Tier Loans To Grow Your Business.
 </div>
@@ -28,7 +39,7 @@ Get Access To POS Terminals, Business Accounts, Business Tools And Access To Top
 
 
 </strong>
-Finance
+{data?.service}
 </div>
 
 <div className="data">

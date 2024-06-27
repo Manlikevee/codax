@@ -9,13 +9,19 @@ import { ref, onValue } from 'firebase/database';
 import Pills from '@/components/Pills';
 
 const Page = () => {
-  const [data, setData] = useState(null);
+
+
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     const dbRef = ref(database, '/websitedata');
     onValue(dbRef, (snapshot) => {
       const fetchedData = snapshot.val();
-      setData(fetchedData);
+      const dataWithKeys = Object.keys(fetchedData).map(key => ({
+        object_key: key,
+        ...fetchedData[key]
+      }));
+      setData(dataWithKeys);
     });
   }, []);
 
@@ -27,9 +33,9 @@ const Page = () => {
         {/* <Filterfields /> */}
         <Pills/>
         <div className="portfoliogrid">
-          {data &&
-            Object.keys(data).map((key) => (
-              <Designcard key={key} data={data[key]} />
+          {data.length > 1 &&
+            data.map((item) => (
+              <Designcard key={item.object_key} data={item} />
             ))}
         </div>
       </div>

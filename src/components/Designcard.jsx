@@ -16,7 +16,7 @@ const Designcard = ({data}) => {
 <img src={data.imageUrl} alt="" />
 </div>
 <div className="textpill">
-  <Link href={`detail/${data?.id}`} className="viewname">
+  <Link href={`detail/${data?.object_key}`} className="viewname">
     <div className="vname">{data?.title}
 
 
