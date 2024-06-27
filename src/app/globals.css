@@ -6,18 +6,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Manrope&family=Poppins&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --body-bg-color: #e5ecef;
+  --theme-bg-color: #f9f9f9;
+  --body-font: "Poppins",sans-serif;
+  --body-color: #2f2f33;
+  --subtitle-color3: #44444a;
+  --theme-bg-color3: #e9edef url(https://cloud.githubusercontent.com/assets/398893/15136779/4e765036-1639-11e6-9201-67e728e86f39.jpg) repeat;
+  --active-color: #0162ff;
+  --active-color2: #3482ff;
+  --active-light-color: #e1ebfb;
+  --header-bg-color: #fff;
+  --search-border-color: #efefef;
+  --border-color: #d8d8d8;
+  --alert-bg-color: #e8f2ff;
+  --subtitle-color: #1b1b1e;
+  --inactive-color: #f6f6f6;
+  --placeholder-color: #9b9ba5;
+  --time-button: #fc5757;
+  --level-button: #5052d5;
+  --button-color: #fff;
+  --header-bg-color2: #1c1c24;
+  --subtitle-color2: #e5e5e5;
+  --inactive-color3: #9b9ba5;
+  --mybrightness: 1;
+  --fullbrightness: 0.7;
+  --myfontfamily:   "Jost", sans-serif;
+}
+
+.dark-mode {
+  --theme-bg-color3: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),#13131a url(https://github.com/Manlikevee/jobportal/raw/master/68747470733a2f2f7765622e77686174736170702e636f6d2f696d672f62672d636861742d74696c652d6461726b5f61346265353132653731393562366237333364393131306234303866303735642e706e67.png) repeat;
+  --header-bg-color2: #d7d5d2;
+  --subtitle-color2: #1b1b1e;
+  --body-bg-color: #1d1d1d;
+  --subtitle-color3: #c6c6c6;
+  --theme-bg-color: #13131a;
+  --header-bg-color: #1c1c24;
+  --alert-bg-color: #292932;
+  --body-color: #fff;
+  --inactive-color: #292932;
+  --inactive-color3: #292932;
+  --time-button: #fff;
+  --level-button: #fff;
+  --active-light-color: #263d63;
+  --border-color: #26262f;
+  --search-border-color: #26262f;
+  --subtitle-color: #e5e5e5;
+  --mybrightness: 0.8;
+  --fullbrightness: 1;
+}
+
+
+
 *,
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter';
-}
+  font-family:  var(--myfontfamily);
 
+}
+a{
+  text-decoration: none;
+}
 body {
 
   /* font-family: 'Nunito Sans', sans-serif; */
-  background-color: #FFF;
+  background-color: var(--theme-bg-color);
   overflow-x: hidden;
 }
 
@@ -25,14 +82,14 @@ body {
 
 header {
   background-color: white;
+  background-color: var(--header-bg-color);
   position: sticky;
   top: 0;
   width: 100%;
-  background: var(--gray-white, #FFF);
+
   z-index: 9999;
   /* Line/Bottom */
-  box-shadow: 0px -1px 0px 0px #E9EAF0 inset;
-  border-bottom: 1px solid #E9EAF0;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 6%);
 }
 
 .ovl {
@@ -90,7 +147,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 text-align: center;
-font-family: Inter;
+font-family:var(--myfontfamily);
 font-size: 14px;
 font-weight: 400;
 line-height: 16.94px;
@@ -115,17 +172,20 @@ color: rgba(77, 74, 74, 1);
 
 
 .links a {
-  font-family: Inter;
+  font-family: var(--myfontfamily);
   font-size: 15px;
   font-weight: 400;
-  line-height: 16.94px;
+  line-height: 9.94px;
   text-transform: capitalize;
   text-align: left;
   text-decoration: none;
-  color: rgba(0, 0, 0, 1);
+  color: var(--body-color);
 
 }
-
+.links span{
+  color: var(--subtitle-color);
+  cursor: pointer;
+}
 .create {
   display: flex;
   gap: 18px;
@@ -142,7 +202,7 @@ color: rgba(77, 74, 74, 1);
   background: #0b0d14;
   border-radius: 3px;
   /* Button/M */
-  font-family: Inter;
+  font-family: var(--myfontfamily);
   font-size: 15px;
   font-style: normal;
   font-weight: 500;
@@ -164,7 +224,7 @@ color: rgba(77, 74, 74, 1);
 
   border-radius: 3px;
   /* Button/M */
-  font-family: Inter;
+  font-family: var(--myfontfamily);
   font-size: 15px;
   font-style: normal;
   font-weight: 500;
@@ -193,14 +253,15 @@ color: rgba(77, 74, 74, 1);
   min-width: 100px;
   margin: 10px;
   padding: 10px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  color: black;
+  background-color: var(--header-bg-color);
+  color: var(--subtitle-color);
   text-align: center;
   border-radius: 5px;
   cursor: pointer;
   user-select: none;
+  font-size: 16px;
   flex: 0 0 auto;
+  box-shadow: 0 3px 3px 0 rgb(0 0 0 / 5%), 0 5px 15px 0 rgb(0 0 0 / 5%);
 }
 
 .pill:active {
@@ -230,13 +291,39 @@ color: rgba(77, 74, 74, 1);
     object-fit: cover;
     object-fit: cover;
     object-position: top;
-    filter: brightness(1) ;
+    filter: brightness(var(--mybrightness));
     transition: 1.5s;
 }
 
 .imagecard img:hover {
   object-position: bottom;
-  filter: brightness(0.7);
+
+  filter: brightness(var(--fullbrightness));
+  
+}
+.headerphotos {
+  width: 100%;
+  /* height: fit-content; */
+  /* background: #f9f9f9; */
+  max-height:80vh;
+  overflow: hidden;
+}
+
+
+.headerphotos img{
+  width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  transition: 1.5s;
+  object-fit: cover;
+  object-fit: cover;
+  object-position: top;
+}
+.headerphotos img:hover {
+  object-position: bottom;
+
+  filter: brightness(var(--fullbrightness));
+  
 }
 .mytabs{
   padding-top: 10px;
@@ -252,7 +339,7 @@ margin: auto;
 z-index: 999999;
 }
 .vname{
-  font-family: Inter;
+  font-family: var(--myfontfamily);
 font-size: 14px;
 font-weight: 600;
 line-height: 16.94px;
@@ -261,14 +348,15 @@ align-items: center;
   font-size: 14px;
   font-weight: 600;
 justify-content: center;
+color: var(--subtitle-color);
 
 }
 
 .vservice{
   padding-inline: 12px;
   padding-block: 5px;
-  background-color: #0b0d14;
-  color: white;
+  background-color: var(--inactive-color);
+  color: var(--subtitle-color);
   font-size: 13px;
   font-weight: 500;
   border-radius: 6px;
@@ -297,7 +385,7 @@ select{
   width: 100%;
   border: 1px solid rgba(228, 228, 228, 1);
   padding: 10px;
-  font-family: Inter;
+  font-family: var(--myfontfamily);
 font-size: 14px;
 font-weight: 400;
 line-height: 16.94px;
@@ -317,11 +405,11 @@ color: rgba(37, 37, 37, 1);
 .logo a{
   font-family: "Pacifico", cursive;
   font-family: Pacifico;
-font-size: 16px;
-font-weight: 400;
+font-size: 15px;
+font-weight: 500;
 line-height: 28.1px;
 text-align: left;
-color: rgba(0, 0, 0, 1);
+color: var(--body-color);
 text-decoration: none;
 }
 .logo img {
@@ -371,7 +459,7 @@ flex-direction: column;
 
 .herocenter h1{
   padding-inline: 150px;
-  font-family: 'Inter';
+  font-family: var(--myfontfamily);
 font-size: 35px;
 font-weight: 700;
 line-height: 50px;
@@ -409,7 +497,7 @@ border-radius: 10px;
 line-height: 22.4px;
 letter-spacing: 0.002em;
 text-align: center;
-font-family: 'Inter';
+font-family: var(--myfontfamily);
 
 }
 .searchpill input{
@@ -429,10 +517,11 @@ text-align: left;
 
 .portfoliocard{
   width: 100%;
-  padding: 2px;
-  border: 1px solid rgba(228, 228, 228, 0.754);
+  padding: 10px;
+  /* border: 1px solid rgba(228, 228, 228, 0.754); */
   border-radius: 7px;
-
+  background-color: var(--header-bg-color);
+  box-shadow: 0 3px 3px 0 rgb(0 0 0 / 5%), 0 5px 15px 0 rgb(0 0 0 / 5%);
   /* font-family: 'manrope' !important; */
 }
 .viewname{
@@ -452,7 +541,7 @@ text-align: left;
 .sd{
   display: flex;
   gap: 2px;
-  font-family: Inter;
+  font-family: var(--myfontfamily);
   align-items: center;
 font-size: 15px;
 font-weight: 400;
@@ -476,11 +565,11 @@ padding-inline: 9px;
 
 .imagecard{
   width: 100%;
-  height: 300px;
-  background: #f9f9f9;
-  max-height: 300px;
+  height: 280px;
+  /* background: #f9f9f9; */
+  max-height: 280px;
   overflow: hidden;
-  border: 1px solid rgba(228, 228, 228, 0.754);
+  border: 1px solid  var(--inactive-color);    
   border-radius: 7px;
 }
 .imagecard {
@@ -568,17 +657,99 @@ object-fit: contain;
   gap: 20px;
 }
 
+
+.myp{
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+.headerphotos{
+  width: 100%;
+  padding: 4px;
+  background-color: var(--header-bg-color);
+}
+
+.sidesection{
+  width: 30%;
+  padding: 14px;
+  background-color: var(--header-bg-color);
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  border: 1px solid var(--border-color) ;
+  border-radius: 5px;
+}
+.data{
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding-bottom: 7px;
+  border-bottom:1px solid var(--border-color) ;
+  font-family: var(--myfontfamily);
+
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 19.94px;
+    text-transform: capitalize;
+    text-align: left;
+    text-decoration: none;
+
+    color: var(--subtitle-color3);
+}
+.data strong{
+  font-size: 16px;
+  font-family: inter;
+  font-weight: 600;
+  color: var(--subtitle-color);
+  padding-bottom: 8px;
+}
+ .data b{
+  font-family: inter;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--subtitle-color);
+  padding-bottom: 8px;
+}
+.data button{
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background-color: var(--active-color2);
+  color: white;
+  font-family: var(--myfontfamily);
+  font-size: 15px;
+  font-weight: 500;
+}
 @media screen and (max-width: 1000px) {
   #middlelinks{
     display: none;
     z-index: 999;
   }
+.myp{
+  flex-direction: column;
+}
+.sidesection{
+  margin-top: 30px;
+  width: 100%;
+}
+.headerphotos {
+  width: 100%;
+
+  max-height:500px;
+  overflow: hidden;
+}
   .search {
     width: 80%;
 }
 .herocenter h1{
   padding-inline: 10px;
-  font-family: 'Inter';
+  font-family: var(--myfontfamily);
   font-size: 29px;
   font-weight: 700;
   line-height: 38px;

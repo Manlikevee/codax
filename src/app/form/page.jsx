@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { database } from '@/components/firebaseConfig';
 import { ref, push } from 'firebase/database';
+import Header from '@/components/Header';
 
 const Page = () => {
   const [websitedata, setWebsiteData] = useState([]);
@@ -38,6 +39,7 @@ const Page = () => {
 
   return (
     <div>
+      <Header />
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="title">Title:</label>

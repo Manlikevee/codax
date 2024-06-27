@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 const Designcard = ({data}) => {
   return (
     <div className='portfoliocard'>
@@ -15,14 +16,14 @@ const Designcard = ({data}) => {
 <img src={data.imageUrl} alt="" />
 </div>
 <div className="textpill">
-  <div className="viewname">
-    <div className="vname">{data.title}
+  <Link href={`detail/${data?.id}`} className="viewname">
+    <div className="vname">{data?.title}
 
 
 
 </div>
     <div className="vservice">{data.service}</div>
-  </div>
+  </Link>
   <div className="viewsite">
     <div className="sd">
     <span className="material-symbols-outlined">
