@@ -37,7 +37,7 @@ const Header = () => {
         </div>
         <div className="links" id="middlelinks">
           <Link href="/form">Inspiration</Link>
-          <a href="Services.html">Learn Design</a>
+          <Link href="/dashboard/userdashboard">Learn Design</Link>
           <a href="">Hire Designers</a>
           <a href="">Hire Developer</a>
           <a href="">Find Work</a>
@@ -46,9 +46,9 @@ const Header = () => {
           <span className="material-symbols-outlined" onClick={toggleDarkMode}>
             contrast
           </span>
-          <a href="contactus.html" className="reg">
+          <Link href="/dashboard/userdashboard" className="reg">
             Contact Us
-          </a>
+          </Link>
         </div>
       </div>
     </header>
