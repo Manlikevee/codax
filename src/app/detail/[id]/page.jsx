@@ -4,6 +4,7 @@ import { useParams } from 'next/navigation';
 import { ref, onValue } from 'firebase/database';
 import { database } from '@/components/firebaseConfig';
 import Header from '@/components/Header';
+import ReactMarkdown from 'react-markdown';
 const page = () => {
   const { id } = useParams();
   const [data, setData] = useState(null);
@@ -67,6 +68,16 @@ Lota Grotesque
 
               </div>
               </div>
+
+
+<br />
+<br />
+
+<div className="mymarkdown">
+<ReactMarkdown>{data?.description}</ReactMarkdown>
+</div>
+
+
 
             </div>
       {id}</div>

@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.14.0",
+    "@tinymce/tinymce-react": "^5.1.1",
     "axios": "^1.7.2",
     "firebase": "^10.12.2",
     "js-cookie": "^3.0.5",
@@ -17,9 +19,12 @@
     "next": "14.2.4",
     "react": "^18",
     "react-dom": "^18",
+    "react-iframe": "^1.8.5",
     "react-lazy-load-image-component": "^1.6.2",
+    "react-markdown": "^9.0.1",
     "react-swipeable": "^7.0.1",
     "swiper": "^11.1.4",
+    "tinymce": "^7.2.0",
     "use-react-screenshot": "^4.0.0"
   }
 }

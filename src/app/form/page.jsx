@@ -26,24 +26,6 @@ const Page = () => {
     img.onload = () => {
       const canvas = document.createElement('canvas');
       const ctx = canvas.getContext('2d');
-
-      // const maxWidth =  img.naturalWidth;// Maximum width for the compressed image
-      // const maxHeight = img.naturalHeight; // Maximum height for the compressed image
-      // let width = img.naturalWidth;
-      // let height = img.naturalHeight;
-
-      // if (width > height) {
-      //   if (width > maxWidth) {
-      //     height = Math.round((height *= maxWidth / width));
-      //     width = maxWidth;
-      //   }
-      // } else {
-      //   if (height > maxHeight) {
-      //     width = Math.round((width *= maxHeight / height));
-      //     height = maxHeight;
-      //   }
-      // }
-
       canvas.width = img.naturalWidth;
       canvas.height = img.naturalHeight;
       ctx.drawImage(img, 0, 0);
