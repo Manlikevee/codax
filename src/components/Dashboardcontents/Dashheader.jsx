@@ -1,8 +1,10 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Dashheader = ({toggleclass}) => {
   return (
     <div className='dashheader'>
+      <div class="logo"><Link href="/">CODAXLAB    </Link></div>
     <div className="srch">
     <span className="material-symbols-outlined">
 search

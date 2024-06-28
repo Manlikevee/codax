@@ -734,6 +734,7 @@ padding: 5px;
   color: var(--subtitle-color3);
   outline: none;
   font-family: var(--myfontfamily);
+  background-color: transparent;
 }
 .tggle{
 border: 1px solid var(--border-color);
@@ -892,10 +893,13 @@ color: var(--subtitle-color);
 }
 .dashheader{
 padding: 10px;
+gap: 10px;
 background-color: var(--header-bg-color);
 
 }
-
+.dashheader .logo{
+  display: none;
+}
 .secdats{
   padding: 13px;
   background-color: var(--inactive-color);
@@ -934,6 +938,7 @@ padding: 20px;
   width: 50%;
   padding: 0px;
   display: flex;
+  display: none;
   flex-direction: column;
   gap: 14px;
 }
@@ -1033,6 +1038,7 @@ font-family: var(--myfontfamily);
   width: 100%;
   display: flex;
   color: var(--subtitle-color3);
+  padding: 10px;
 }
 
 .tbody{
@@ -1058,15 +1064,24 @@ font-weight: 600;
 line-height: 32px;
 
 }
+/* .crystalcard:first-child {
+  background: #007146;
+  padding: 36px;
+  height: auto;
+  background-image: none !important;
+} */
 .dashcards{
   gap: 24px;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+
 }
 .dashcard{
-  padding-inline: 23px;
-  padding-block: 20px;
+  box-shadow: 0px 3.650273084640503px 14.601092338562012px 0px #0000000D;
+  padding-inline: 33px;
+  padding-block: 36px;
   background-color: transparent;
   border: 1px solid var(--border-color);
   display: flex;
@@ -1081,8 +1096,9 @@ line-height: 32px;
 
 .dnum{
   font-family: Manrope;
-font-size: 19px;
+font-size: 20px;
 font-weight: 600;
+padding-bottom: 8px;
 line-height: 24px;
 text-align: left;
 color:  rgba(255, 255, 255, 1);
@@ -1092,7 +1108,7 @@ color:  rgba(255, 255, 255, 1);
 
 .dtetx{
   font-family: var(--myfontfamily);
-font-size: 13px;
+font-size: 17px;
 font-weight: 400;
 line-height: 16px;
 text-align: left;
@@ -1104,9 +1120,13 @@ color:  rgba(255, 255, 255, 1);
     display: none;
     z-index: 999;
   }
-
+  .dashheader .logo{
+    display: flex;
+  }
   .tggle{
     display: block;
+            z-index: 999999;
+    
   }
 
   .sharedintwo{
@@ -1217,14 +1237,29 @@ height: 500px;
       max-height: 345px;
       overflow: hidden;
   }
-
+  .tbody, .thead{
+    border: 1px solid var(--bordertwo);
+    width: 100%;
+    display: flex;
+    color: var(--subtitle-color3);
+    padding: 5px;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+  }
+  .tlittle {
+    width: 30%;
+    text-align: left;
+    display: flex;
+    justify-content: start;
+}
   .sidebarshow {
     position: absolute;
     transition: 0.5s ease;
     left: 0;
-    width: 90%;
+    width: 100%;
     padding: 20px;
-    z-index: 999999;
+    z-index: 99999;
     height: 100vh;
     background-color: var(--header-bg-color);
   }

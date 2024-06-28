@@ -30,13 +30,23 @@ const DashLayout = () => {
                         <div className="dashcards">
                         <Dashboaredcards title='Projects Uploaded'  value='20000'/>
                         <Dashboaredcards title='Reactions'  value='200'/>
-                        <Dashboaredcards title='Sales'  value='$200'/>
+              
                         </div>
 
                         <br />
                         <div className="welcometxt">
                           My Projects
                         </div>   
+
+                        <div className="subtxts">
+                        Codax is a community of top-tier developers, designers, and tech professionals. The premier destination to discover and showcase creativity.
+                        </div>
+                        <div className="srch">
+    <span className="material-symbols-outlined">
+search
+</span>
+        <input type="text" /></div>
+        <br />
     <Dashboardtable/>
                     </div>
                     <div className="shareintwo">
