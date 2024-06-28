@@ -6,8 +6,8 @@ import Dashboaredcards from './Dashboaredcards'
 import Image from 'next/image'
 import myimg from '../../../public/gb6.png'
 import myimg2 from '../../../public/gb(3).png'
-import myimg3 from '../../../public/group4.png'
-import myimg4 from '../../../public/group5.png'
+import myimg3 from '../../../public/Group4.png'
+import myimg4 from '../../../public/Group5.png'
 import Dashboardtable from './Dashboardtable'
 const DashLayout = () => {
 

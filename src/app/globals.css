@@ -18,6 +18,7 @@
   --active-color: #0162ff;
   --active-color2: #3482ff;
   --active-light-color: #e1ebfb;
+  --mainarea:  hsl(0, 0%, 97%);
   --header-bg-color: #fff;
   --search-border-color: #efefef;
   --border-color: #d8d8d8;
@@ -42,6 +43,7 @@
   --header-bg-color2: #d7d5d2;
   --subtitle-color2: #1b1b1e;
   --body-bg-color: #1d1d1d;
+  --mainarea:  #1d1d1d;
   --subtitle-color3: #c6c6c6;
   --theme-bg-color: #13131a;
   --header-bg-color: #1c1c24;
