@@ -9,7 +9,7 @@ import myimg2 from '../../../public/gb(3).png'
 import myimg3 from '../../../public/Group4.png'
 import myimg4 from '../../../public/Group5.png'
 import Dashboardtable from './Dashboardtable'
-const DashLayout = () => {
+const DashLayout = ({children}) => {
 
     const [isopen, setIsopen] = useState(false);
     function toggleclass(){
@@ -27,27 +27,9 @@ const DashLayout = () => {
                         </div>
                 <div className="sharedintwo">
                     <div className="shareinone">
-                        <div className="dashcards">
-                        <Dashboaredcards title='Projects Uploaded'  value='20000'/>
-                        <Dashboaredcards title='Reactions'  value='200'/>
-              
-                        </div>
 
-                        <br />
-                        <div className="welcometxt">
-                          My Projects
-                        </div>   
-
-                        <div className="subtxts">
-                        Codax is a community of top-tier developers, designers, and tech professionals. The premier destination to discover and showcase creativity.
-                        </div>
-                        <div className="srch">
-    <span className="material-symbols-outlined">
-search
-</span>
-        <input type="text" /></div>
-        <br />
-    <Dashboardtable/>
+                        {children}
+                   
                     </div>
                     <div className="shareintwo">
 

@@ -1,8 +1,9 @@
 'use client'
 import React from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation';
 const Sidebar = ({isopen}) => {
-
+  const pathname = usePathname();
 
 
   return (
@@ -11,7 +12,8 @@ const Sidebar = ({isopen}) => {
 
     
     <div className="sidelinks">
-      <Link href='#' className='sidelink vmyactivelink'>
+      <Link href='/dashboard/userdashboard'
+      className={`sidelink ${pathname === '/dashboard/userdashboard' ? 'vmyactivelink' : ''}`}>
       <span class="material-symbols-outlined">
 grid_view
 </span>  
@@ -19,7 +21,7 @@ grid_view
 </div>
         </Link>
 
-        <Link href='#' className='sidelink'>
+        <Link href='/dashboard/projects'   className={`sidelink ${pathname === '/dashboard/projects' ? 'vmyactivelink' : ''}`}>
       <span class="material-symbols-outlined">
       inventory_2
 </span>  
@@ -42,7 +44,13 @@ grid_view
 <div className="navtext">Settings
 </div>
         </Link>
-
+        <Link href='#' className='sidelink'>
+      <span class="material-symbols-outlined">
+      dataset_linked
+</span>  
+<div className="navtext">Integrations
+</div>
+        </Link>
 
 
     </div>
