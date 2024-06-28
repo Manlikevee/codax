@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import myimg from '../../public/gb6.png'
+
 const Designcard = ({data}) => {
   return (
     <div className='portfoliocard'>
@@ -14,7 +14,7 @@ const Designcard = ({data}) => {
 </span>
   </div>
 
-<img src={data.imageUrl|myimg} alt="" />
+<img src={data.imageUrl} alt="" />
 </div>
 <div className="textpill">
   <Link href={`detail/${data?.object_key}`} className="viewname">
