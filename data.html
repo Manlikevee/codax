@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+  <div className="miniforminput">
+    <label htmlFor=''></label>
+    <div className="miniforminputdata">
+        <input type='text' name=''      
+           value='' placeholder='' />
+    </div>
+    </div> 
+
+    <div className="miniforminput">
+      <label htmlFor=''></label>
+      <div className="miniforminputdata">
+ <textarea name="" id="" cols="30" rows="10"></textarea>
+      </div>
+      </div> 
+
+    <script>
+        async function uploadPDF() {
+  // Get the PDF file from an input element
+  const fileInput = document.getElementById('pdfFileInput');
+  const pdfFile = fileInput.files[0];
+  
+  if (!pdfFile) {
+    console.error('No PDF file selected');
+    return;
+  }
+
+  // Create FormData and append the PDF file
+  const formData = new FormData();
+  formData.append('pdf_file', pdfFile);
+
+  try {
+    // Send POST request to the endpoint
+    const response = await fetch('http://127.0.0.1:8000/AiPdf', {
+      method: 'POST',
+      body: formData,
+    });
+
+    if (!response.ok) {
+      throw new Error(`Error: ${response.statusText}`);
+    }
+
+    // Parse the JSON response
+    const result = await response.json();
+    console.log('Upload successful:', result);
+
+    // Display the reference ID from the server
+    alert(`PDF uploaded successfully. Ref ID: ${result.ref_id}`);
+  } catch (error) {
+    console.error('Upload failed:', error);
+    alert('Failed to upload PDF');
+  }
+}
+
+// Create a simple HTML input and button to trigger the upload
+document.body.innerHTML = `
+  <input type="file" id="pdfFileInput" accept="application/pdf">
+  <button onclick="uploadPDF()">Upload PDF</button>
+`;
+
+    </script>
+</body>
+</html>

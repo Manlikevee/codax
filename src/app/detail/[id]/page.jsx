@@ -5,6 +5,7 @@ import { ref, onValue } from 'firebase/database';
 import { database } from '@/components/firebaseConfig';
 import Header from '@/components/Header';
 import ReactMarkdown from 'react-markdown';
+
 const page = () => {
   const { id } = useParams();
   const [data, setData] = useState(null);
@@ -17,6 +18,9 @@ const page = () => {
       setData(fetchedData);
     });
   }, [id]);
+
+
+
   return (
     <div>
             <Header />

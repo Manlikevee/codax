@@ -3,8 +3,6 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Cookies from 'js-cookie'
-import Image from 'next/image'
-import myimg from '../../public/trello.png'
 
 const Header = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
