@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Cookies from 'js-cookie'
+import Darktoggle from './Darktoggle'
 
 const Header = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -18,6 +19,7 @@ const Header = () => {
 
   // Function to toggle dark mode
   const toggleDarkMode = () => {
+  
     const newMode = !isDarkMode;
     setIsDarkMode(newMode);
     Cookies.set('darkMode', JSON.stringify(newMode), { expires: 365 });
@@ -35,17 +37,17 @@ const Header = () => {
         </div>
         <div className="links" id="middlelinks">
           <Link href="/form">Inspiration</Link>
-          <Link href="/dashboard/userdashboard">Learn Design</Link>
-          <a href="">Hire Designers</a>
-          <a href="">Hire Developer</a>
-          <a href="">Find Work</a>
+          <Link href="/dashboard/userdashboard">Random Pick</Link>
+          <Link href="">Hackathon</Link>
+          <Link href="">Events</Link>
+          <Link href="">Job Board</Link>
         </div>
         <div className="links">
-          <span className="material-symbols-outlined" onClick={toggleDarkMode}>
-            contrast
-          </span>
+       
+            <Darktoggle func={toggleDarkMode}/>
+       
           <Link href="/dashboard/userdashboard" className="reg">
-            Contact Us
+            Login
           </Link>
         </div>
       </div>
