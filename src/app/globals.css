@@ -197,7 +197,7 @@ color: rgba(77, 74, 74, 1);
 
 .reg {
   display: flex;
-  padding: 12px 12px;
+  padding: 14px 14px;
   justify-content: center;
   align-items: center;
   gap: 12px;
@@ -205,6 +205,8 @@ color: rgba(77, 74, 74, 1);
   border-radius: 5px;
   background: #0b0d14;
   border-radius: 3px;
+  border: 1px solid #0b0d14;
+
   /* Button/M */
   font-family: var(--myfontfamily);
   font-size: 15px;
@@ -1523,4 +1525,117 @@ cursor: pointer;
   border: 1px solid var(--header-bg-color);
   color: var(--header-bg-color2);
   border-radius: 3px;
+}
+
+
+.footer {
+  margin-top: 50px;
+  width: 100%;
+
+  background: #2f2f33;
+  background-image: url('https://cpwebassets.codepen.io/assets/packs/profile-bg-optimized-a5ca8f46aca292507f629c62b09630ad.svg');
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+.footer .footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3.5rem;
+  padding-block: 60px;
+}
+
+
+.footer-row .footer-col h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.footer-col .link {
+  margin-top: 20px;
+}
+.footer-col .link li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+.footer-col .link li a {
+  text-decoration: none;
+  color: #bfbfbf;
+}
+.footer-col .link li a:hover {
+  color: #fff;
+}
+.footer-col p {
+  margin: 20px 0;
+  color: #bfbfbf;
+  max-width: 300px;
+}
+.footer-col form {
+  display: flex;
+  gap: 5px;
+}
+.footer-col input {
+  height: 40px;
+  border-radius: 6px;
+  background: none;
+  width: 100%;
+  outline: none;
+  border: 1px solid #7489C6 ;
+  caret-color: #fff;
+  color: #fff;
+  padding-left: 10px;
+}
+.footer-col input::placeholder {
+  color: #ccc;
+}
+ .footer-col form button {
+  background: #fff;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+.footer-col form button:hover {
+  background: #cecccc;
+}
+.footer-col .icons {
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
+  cursor: pointer;
+}
+.footer-col .icons i {
+  color: #afb6c7;
+}
+.footer-col .icons i:hover  {
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    border-radius: 0;
+  }
+  .footer .footer-row {
+    padding: 20px;
+    gap: 1rem;
+  }
+  .footer-col form {
+    display: block;
+  }
+  .footer-col form :where(input, button) {
+    width: 100%;
+  }
+  .footer-col form button {
+    margin: 10px 0 0 0;
+  }
 }
