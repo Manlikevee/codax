@@ -849,15 +849,16 @@ border: 1px solid var(--border-color);
   gap: 40px;
 }
 .sidelinks{
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 5px;
   font-family: var(--myfontfamily);
 }
 
 .sidelink{
   padding: 13px;
-  background-color: var(--inactive-color);
+  /* background-color: var(--inactive-color); */
 border-radius: 4px;
 display: flex;
 border: 1px solid var(--theme-bg-color);
@@ -873,6 +874,18 @@ line-height: 24px;
 text-align: left;
 
 }
+
+
+.sidelink{
+  
+}
+
+.btm {
+  background-color: bisque;
+  width: 100%;
+  color: black;
+}
+
 .highesttable{
   width: 100%;
   display: flex;
