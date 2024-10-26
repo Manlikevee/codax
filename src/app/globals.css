@@ -1534,9 +1534,11 @@ cursor: pointer;
 .footer {
   margin-top: 50px;
   width: 100%;
-
+  --color: rgba(114, 114, 114, 0.3);
   background: #2f2f33;
   background-image: url('https://cpwebassets.codepen.io/assets/packs/profile-bg-optimized-a5ca8f46aca292507f629c62b09630ad.svg');
+
+background-size: 55px 55px;
   background-size:cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -1562,23 +1564,41 @@ cursor: pointer;
 }
 .footer-col .link li {
   list-style: none;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .footer-col .link li a {
   text-decoration: none;
   color: #bfbfbf;
+  /* font-family: "Jost", sans-serif; */
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 9.94px;
+  text-transform: capitalize;
+  text-align: left;
+  text-decoration: none;
 }
 .footer-col .link li a:hover {
   color: #fff;
+
 }
 .footer-col p {
   margin: 20px 0;
   color: #bfbfbf;
   max-width: 300px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 19.94px;
+
+  text-align: left;
+  text-decoration: none;
 }
 .footer-col form {
   display: flex;
   gap: 5px;
+
 }
 .footer-col input {
   height: 40px;
