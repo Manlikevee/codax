@@ -7,6 +7,7 @@ import Designcard from '@/components/Designcard';
 import { database } from '@/components/firebaseConfig';
 import { ref, onValue } from 'firebase/database';
 import Pills from '@/components/Pills';
+import Footer from '@/components/Footer';
 
 const Page = () => {
 
@@ -88,6 +89,7 @@ const Page = () => {
       )}
     </div>
       </div>
+      <Footer/>
     </div>
   );
 };
