@@ -1011,6 +1011,8 @@ transition: 0.3s ease-in-out;
   text-overflow: ellipsis;
 }
 
+
+
 .vname{
   display: -webkit-box;
   -webkit-line-clamp: 1;
